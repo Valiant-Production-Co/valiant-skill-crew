@@ -88,7 +88,7 @@ export const products: Product[] = [
     colorways: [
       {
         id: 'black',
-        label: 'Black / Gold',
+        label: 'Black / Neon V',
         swatch: '#111111',
         front: '/products/skillcrew-black-front.png',
         back: '/products/crest-black.jpeg',
@@ -102,13 +102,13 @@ export const products: Product[] = [
       },
       {
         id: 'off-white',
-        label: 'Off-White / Red',
+        label: 'Off-White / Bronze',
         swatch: '#efe8db',
         front: '/products/skillcrew-offwhite-front.png',
       },
     ],
     description:
-      'The everyday piece. A heavyweight crewneck with the torn brush-script "Skill Crew" wordmark on the left chest. Choose your colorway — each carries a different wordmark color.',
+      'The everyday piece. A heavyweight crewneck carrying the real Skill Crew brush lettering on the left chest — black on the grey, bronze on the off-white. The black version wears the neon "V" mark instead.',
     features: [
       'Heavyweight cotton blend',
       'Left-chest Skill Crew brush print',
