@@ -1,3 +1,11 @@
+export type Colorway = {
+  id: string
+  label: string
+  swatch: string
+  front: string
+  back?: string
+}
+
 export type Product = {
   id: string
   name: string
@@ -7,6 +15,7 @@ export type Product = {
   accent: 'gold' | 'silence-red' | 'v-orange'
   image: string
   backImage?: string
+  colorways?: Colorway[]
   description: string
   features: string[]
   badge?: string
@@ -68,20 +77,42 @@ export const products: Product[] = [
     ],
   },
   {
-    id: 'crest-crewneck',
-    name: 'Crest Crewneck',
+    id: 'skill-crew-crewneck',
+    name: 'Skill Crew Crewneck',
     category: 'Crewneck',
-    colorway: 'Heather Gray',
+    colorway: 'Black / Grey / Off-White',
     price: 84,
     accent: 'gold',
-    image: '/products/gray-crewneck-front.png',
+    image: '/products/skillcrew-grey-front.png',
     backImage: '/products/gray-crewneck-back.jpeg',
+    colorways: [
+      {
+        id: 'black',
+        label: 'Black / Gold',
+        swatch: '#111111',
+        front: '/products/skillcrew-black-front.png',
+        back: '/products/crest-black.jpeg',
+      },
+      {
+        id: 'grey',
+        label: 'Heather Grey / Black',
+        swatch: '#b7b7b7',
+        front: '/products/skillcrew-grey-front.png',
+        back: '/products/gray-crewneck-back.jpeg',
+      },
+      {
+        id: 'off-white',
+        label: 'Off-White / Red',
+        swatch: '#efe8db',
+        front: '/products/skillcrew-offwhite-front.png',
+      },
+    ],
     description:
-      'The everyday piece. A heavyweight heather-gray crewneck kept clean up front, with the full color crest printed big across the back — Excellence is Our Only Standard.',
+      'The everyday piece. A heavyweight crewneck with the torn brush-script "Skill Crew" wordmark on the left chest. Choose your colorway — each carries a different wordmark color.',
     features: [
       'Heavyweight cotton blend',
-      'Full-color back crest print',
-      'Clean blank front',
+      'Left-chest Skill Crew brush print',
+      'Three colorways, distinct wordmarks',
       'Ribbed collar and cuffs',
       'Relaxed unisex fit',
     ],

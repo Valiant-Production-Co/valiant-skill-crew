@@ -11,16 +11,29 @@ const accentClasses: Record<Product['accent'], string> = {
 }
 
 export function ProductCard({ product }: { product: Product }) {
+  const colorways = product.colorways
+  const [activeIdx, setActiveIdx] = useState(0)
   const [showBack, setShowBack] = useState(false)
-  const hasBack = Boolean(product.backImage)
-  const currentImage = showBack && product.backImage ? product.backImage : product.image
+
+  const active = colorways ? colorways[activeIdx] : null
+  const frontImage = active ? active.front : product.image
+  const backImage = active ? active.back : product.backImage
+  const hasBack = Boolean(backImage)
+  const currentImage = showBack && backImage ? backImage : frontImage
+  const colorwayLabel = active ? active.label : product.colorway
+
+  function selectColorway(idx: number) {
+    setActiveIdx(idx)
+    // reset to front so we never show a back that a colorway doesn't have
+    setShowBack(false)
+  }
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-lg border border-border/60 bg-card transition-colors hover:border-gold/40">
       <div className="relative aspect-[4/5] overflow-hidden bg-secondary">
         <Image
           src={currentImage || '/placeholder.svg'}
-          alt={`${product.name} — ${product.colorway}`}
+          alt={`${product.name} — ${colorwayLabel}`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
@@ -57,8 +70,31 @@ export function ProductCard({ product }: { product: Product }) {
           <h3 className="font-display text-xl font-semibold uppercase tracking-tight text-foreground text-balance">
             {product.name}
           </h3>
-          <p className="text-sm text-muted-foreground">{product.colorway}</p>
+          <p className="text-sm text-muted-foreground">{colorwayLabel}</p>
         </div>
+
+        {colorways && (
+          <div className="flex items-center gap-2" role="group" aria-label="Choose a colorway">
+            {colorways.map((cw, idx) => {
+              const isActive = idx === activeIdx
+              return (
+                <button
+                  key={cw.id}
+                  type="button"
+                  onClick={() => selectColorway(idx)}
+                  aria-label={cw.label}
+                  aria-pressed={isActive}
+                  className={`h-7 w-7 rounded-full border-2 transition-transform ${
+                    isActive
+                      ? 'border-gold scale-110'
+                      : 'border-border hover:border-muted-foreground'
+                  }`}
+                  style={{ backgroundColor: cw.swatch }}
+                />
+              )
+            })}
+          </div>
+        )}
 
         <p className="text-sm leading-relaxed text-muted-foreground">
           {product.description}
