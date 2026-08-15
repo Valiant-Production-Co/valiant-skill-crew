@@ -10,10 +10,10 @@ export function SiteHeader() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-foreground">
-              Valiant Garage Door
+              Valiant Skill Crew
             </span>
             <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              Apparel Lineup
+              Clothing Brand
             </span>
           </span>
         </Link>

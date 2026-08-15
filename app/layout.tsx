@@ -15,9 +15,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Valiant Garage Door LLC — Signature Apparel Lineup',
+  title: 'Valiant Skill Crew — Workwear-Grade Apparel',
   description:
-    'The official Valiant Garage Door LLC apparel collection. Excellence is Our Only Standard. We Bring The Silence. Premium jackets, hoodies, and crewnecks.',
+    'Valiant Skill Crew is the clothing brand built like the work. Excellence is Our Only Standard. We Bring The Silence. Premium jackets, hoodies, and crewnecks.',
   generator: 'v0.app',
 }
 

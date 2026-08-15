@@ -8,7 +8,7 @@ export function SiteFooter() {
           </span>
           <div className="flex flex-col leading-tight">
             <span className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-foreground">
-              Valiant Garage Door LLC
+              Valiant Skill Crew
             </span>
             <span className="text-xs text-muted-foreground">
               Excellence is Our Only Standard™
@@ -21,7 +21,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60 py-4">
         <p className="text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Valiant Garage Door LLC. All rights reserved.
+          © {new Date().getFullYear()} Valiant Skill Crew. All rights reserved.
         </p>
       </div>
     </footer>

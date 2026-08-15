@@ -14,9 +14,9 @@ export function Hero() {
             <span className="text-gold">The Silence</span>
           </h1>
           <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-            The official apparel collection from Valiant Garage Door LLC. Built
-            like the work — heavy, quiet, and finished to the last stitch. Four
-            signature pieces, one standard.
+            Valiant Skill Crew — the clothing brand built like the work. Heavy,
+            quiet, and finished to the last stitch. Signature jackets, hoodies,
+            and crewnecks, all held to one standard.
           </p>
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <a
@@ -39,7 +39,7 @@ export function Hero() {
           <div className="relative aspect-square overflow-hidden rounded-lg border border-border/60 bg-secondary">
             <Image
               src="/products/jacket-showcase.jpeg"
-              alt="Valiant Garage Door signature jacket shown from front, back, and detail angles"
+              alt="Valiant Skill Crew signature jacket shown from front, back, and detail angles"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
