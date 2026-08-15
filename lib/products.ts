@@ -15,7 +15,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: 'signature-hooded-bomber',
-    name: 'Signature Hooded Bomber',
+    name: 'The Valiant Blue Collar Baller',
     category: 'Jacket',
     colorway: 'Jet Black / Orange V',
     price: 189,
