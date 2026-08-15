@@ -105,6 +105,7 @@ export const products: Product[] = [
         label: 'Off-White / Bronze',
         swatch: '#efe8db',
         front: '/products/skillcrew-offwhite-front.png',
+        back: '/products/skillcrew-offwhite-back.png',
       },
     ],
     description:
