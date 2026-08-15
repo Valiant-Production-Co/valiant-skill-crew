@@ -74,12 +74,14 @@ export const products: Product[] = [
     colorway: 'Heather Gray',
     price: 84,
     accent: 'gold',
-    image: '/products/gray-crewneck.jpeg',
+    image: '/products/gray-crewneck-front.png',
+    backImage: '/products/gray-crewneck-back.jpeg',
     description:
-      'The everyday piece. A heavyweight heather-gray crewneck carrying the full color crest front and center — Excellence is Our Only Standard, in one clean print.',
+      'The everyday piece. A heavyweight heather-gray crewneck kept clean up front, with the full color crest printed big across the back — Excellence is Our Only Standard.',
     features: [
       'Heavyweight cotton blend',
-      'Full-color front crest print',
+      'Full-color back crest print',
+      'Clean blank front',
       'Ribbed collar and cuffs',
       'Relaxed unisex fit',
     ],
